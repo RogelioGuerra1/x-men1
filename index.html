@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Men: Descubre tu Poder Mutante</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="floating-icons" id="floatingIcons"></div>
+    
+    <div class="container">
+        <div class="header">
+            <div class="x-logo"></div>
+            <h1>X-Men: Descubre tu Poder Mutante</h1>
+            <h2>¿Qué habilidad mutante se esconde en tu ADN?</h2>
+        </div>
+        
+        <div class="card intro active" id="intro">
+            <p>El Profesor Charles Xavier ha detectado una actividad inusual en tu código genético. Para determinar qué tipo de poder mutante posees, necesitamos que completes un breve cuestionario diseñado por Cerebro.</p>
+            <p><br>Este análisis determinará tus habilidades latentes y te asignará un mentor de la Escuela para Jóvenes Dotados.</p>
+            <div class="actions">
+                <button class="btn btn-yellow" id="startQuiz">Iniciar Análisis Mutante</button>
+            </div>
+        </div>
+        
+        <div class="card question-container" id="questionContainer">
+            <h3 id="questionText">Cargando pregunta...</h3>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="options" id="options">
+                <!-- Las opciones se generarán dinámicamente con JavaScript -->
+            </div>
+            <div class="actions">
+                <button class="btn" id="prevQuestion" style="display: none;">Anterior</button>
+                <button class="btn btn-yellow" id="nextQuestion">Siguiente</button>
+            </div>
+        </div>
+        
+        <div class="card results-container" id="resultsContainer">
+            <h3>Análisis de Cerebro Completado</h3>
+            <div class="result-image" id="resultImage"></div>
+            <h2 id="resultTitle">Tu poder mutante es:</h2>
+            <h1 id="resultPower">Cargando resultado...</h1>
+            
+            <div class="mutant-info">
+                <h3>Análisis de Habilidades</h3>
+                
+                <div class="mutant-ability">
+                    <div class="ability-label">Fuerza:</div>
+                    <div class="ability-bar-container">
+                        <div class="ability-bar" id="strengthBar"></div>
+                    </div>
+                </div>
+                
+                <div class="mutant-ability">
+                    <div class="ability-label">Mente:</div>
+                    <div class="ability-bar-container">
+                        <div class="ability-bar" id="mindBar"></div>
+                    </div>
+                </div>
+                
+                <div class="mutant-ability">
+                    <div class="ability-label">Energía:</div>
+                    <div class="ability-bar-container">
+                        <div class="ability-bar" id="energyBar"></div>
+                    </div>
+                </div>
+                
+                <div class="mutant-ability">
+                    <div class="ability-label">Control:</div>
+                    <div class="ability-bar-container">
+                        <div class="ability-bar" id="controlBar"></div>
+                    </div>
+                </div>
+                
+                <div class="mutant-description" id="resultDescription">
+                    <!-- Descripción dinámica del poder -->
+                </div>
+                
+                <div class="character-match" id="characterMatch">
+                    <!-- Personaje de X-Men relacionado -->
+                </div>
+            </div>
+            
+            <div class="actions">
+                <button class="btn" id="restartQuiz">Reiniciar Análisis</button>
+                <button class="btn btn-yellow" id="shareResult">Compartir Resultado</button>
+            </div>
+        </div>
+        
+        <footer>
+            Creado para la Escuela de Charles Xavier para Jóvenes Dotados &copy; 2025
+        </footer>
+    </div>
+
+      <script src="script.js"></script>
+</body>
+</html>
